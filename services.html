@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="K-Tech Solutions offers comprehensive data analytics services including business analytics, customer analytics, marketing analytics, and custom data solutions for growing businesses.">
+    <meta name="keywords"
+        content="business analytics, sales analytics, customer analytics, marketing analytics, data solutions, K-Tech Solutions">
+    <meta name="author" content="K-Tech Solutions">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Our Services - K-Tech Solutions">
+    <meta property="og:description" content="Comprehensive analytics solutions tailored to your business needs.">
+    <meta property="og:type" content="website">
+
+    <title>Our Services - K-Tech Solutions</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#e6f7ff',
+                            100: '#bae7ff',
+                            200: '#91d5ff',
+                            300: '#69c0ff',
+                            400: '#40a9ff',
+                            500: '#1890ff',
+                            600: '#096dd9',
+                            700: '#0050b3',
+                            800: '#003a8c',
+                            900: '#002766',
+                        },
+                        accent: {
+                            500: '#13c2c2',
+                            600: '#08979c',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+
+<body class="font-sans antialiased bg-gray-50">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-bold text-primary-600">
+                        K-Tech Solutions
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html"
+                            class="text-gray-600 hover:text-primary-600 px-3 py-2 text-sm transition duration-300">Home</a>
+                        <a href="services.html"
+                            class="text-gray-900 font-semibold border-b-2 border-primary-600 px-3 py-2 text-sm">Services</a>
+                        <a href="how-it-works.html"
+                            class="text-gray-600 hover:text-primary-600 px-3 py-2 text-sm transition duration-300">How
+                            It Works</a>
+                        <a href="case-studies.html"
+                            class="text-gray-600 hover:text-primary-600 px-3 py-2 text-sm transition duration-300">Case
+                            Studies</a>
+                        <a href="about.html"
+                            class="text-gray-600 hover:text-primary-600 px-3 py-2 text-sm transition duration-300">About
+                            Us</a>
+                        <a href="contact.html"
+                            class="bg-primary-600 text-white px-5 py-2 rounded-lg hover:bg-primary-700 transition duration-300 text-sm font-semibold">Contact</a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary-600 focus:outline-none"
+                        aria-label="Toggle mobile menu">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-gray-600 hover:bg-gray-50">Home</a>
+                <a href="services.html" class="block px-3 py-2 text-gray-900 font-semibold bg-primary-50">Services</a>
+                <a href="how-it-works.html" class="block px-3 py-2 text-gray-600 hover:bg-gray-50">How It Works</a>
+                <a href="case-studies.html" class="block px-3 py-2 text-gray-600 hover:bg-gray-50">Case Studies</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-600 hover:bg-gray-50">About Us</a>
+                <a href="contact.html" class="block px-3 py-2 text-primary-600 font-semibold">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bg-gradient-to-r from-primary-600 to-primary-700 text-white py-16 md:py-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Our Services</h1>
+                <p class="text-xl text-blue-100">
+                    Comprehensive analytics solutions designed to solve your business challenges
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business & Sales Analytics -->
+    <section id="business-analytics" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div
+                        class="inline-block px-4 py-2 bg-primary-100 text-primary-600 rounded-full font-semibold text-sm mb-4">
+                        Service 01
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Business & Sales Analytics</h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Unlock revenue opportunities and identify growth areas with data-driven sales intelligence.
+                    </p>
+
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-1" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            <div>
+                                <h3 class="font-semibold text-gray-900 mb-1">Revenue & Profit Analysis</h3>
+                                <p class="text-gray-600">Track revenue trends, profit margins, and identify
+                                    high-performing segments</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-1" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            <div>
+                                <h3 class="font-semibold text-gray-900 mb-1">Sales Trend Identification</h3>
+                                <p class="text-gray-600">Spot patterns, seasonal variations, and emerging opportunities
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-1" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            <div>
+                                <h3 class="font-semibold text-gray-900 mb-1">Product & Region Performance</h3>
+                                <p class="text-gray-600">Understand which products and regions drive the most value</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-1" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            <div>
+                                <h3 class="font-semibold text-gray-900 mb-1">Forecasting & Growth Insights</h3>
+                                <p class="text-gray-600">Predict future performance and plan for sustainable growth</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-blue-50 p-6 rounded-lg border-l-4 border-primary-600">
+                        <h4 class="font-bold text-gray-900 mb-2">Business Impact</h4>
+                        <p class="text-gray-600">Make data-backed decisions on pricing, inventory, and resource
+                            allocation to maximize profitability.</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Sample Insight</h3>
+                    <canvas id="roiChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Analytics -->
+    <section id="customer-analytics" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1 bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold text-gray-900 mb-6">Key Metrics We Track</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center p-4 bg-primary-50 rounded-lg">
+                            <span class="font-semibold text-gray-900">Customer Lifetime Value (CLV)</span>
+                            <span class="text-2xl font-bold text-primary-600">₹2.4L</span>
+                        </div>
+                        <div class="flex justify-between items-center p-4 bg-green-50 rounded-lg">
+                            <span class="font-semibold text-gray-900">Retention Rate</span>
+                            <span class="text-2xl font-bold text-green-600">87%</span>
+                        </div>
+                        <div class="flex justify-between items-center p-4 bg-yellow-50 rounded-lg">
+                            <span class="font-semibold text-gray-900">Churn Rate</span>
+                            <span class="text-2xl font-bold text-yellow-600">13%</span>
+                        </div>
+                        <div class="flex justify-between items-center p-4 bg-purple-50 rounded-lg">
+                            <span class="font-semibold text-gray-900">Average Order Value</span>
+                            <span class="text-2xl font-bold text-purple-600">₹12.5K</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-1 lg:order-2">
+                    <div
+                        class="inline-block px-4 py-2 bg-accent-100 text-accent-600 rounded-full font-semibold text-sm mb-4">
+                        Service 02
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Customer Analytics</h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Understand your customers better and build lasting relationships that drive loyalty and revenue.
+                    </p>
+
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-1" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            <div>
+                                <h3 class="font-semibold text-gray-900 mb-1">Customer Segmentation</h3>
+                                <p class="text-gray-600">Group customers by behavior, value, and preferences for
+                                    targeted strategies</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-1" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            <div>
+                                <h3 class="font-semibold text-gray-900 mb-1">Churn & Retention Analysis</h3>
+                                <p class="text-gray-600">Identify at-risk customers and implement retention strategies
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-1" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            <div>
+                                <h3 class="font-semibold text-gray-900 mb-1">Customer Lifetime Value (CLV)</h3>
+                                <p class="text-gray-600">Calculate long-term value to optimize acquisition spending</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-1" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            <div>
+                                <h3 class="font-semibold text-gray-900 mb-1">Behavioral Pattern Analysis</h3>
+                                <p class="text-gray-600">Understand purchase cycles, preferences, and decision drivers
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-teal-50 p-6 rounded-lg border-l-4 border-accent-600">
+                        <h4 class="font-bold text-gray-900 mb-2">Business Impact</h4>
+                        <p class="text-gray-600">Reduce churn, increase customer lifetime value, and personalize
+                            marketing for higher conversion rates.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marketing Analytics -->
+    <section id="marketing-analytics" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div
+                        class="inline-block px-4 py-2 bg-green-100 text-green-600 rounded-full font-semibold text-sm mb-4">
+                        Service 03
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Marketing Analytics</h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Maximize marketing ROI by understanding what works, what doesn't, and where to invest.
+                    </p>
+
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-1" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            <div>
+                                <h3 class="font-semibold text-gray-900 mb-1">Campaign Performance Analysis</h3>
+                                <p class="text-gray-600">Measure effectiveness across channels and campaigns</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-1" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            <div>
+                                <h3 class="font-semibold text-gray-900 mb-1">ROI & Conversion Tracking</h3>
+                                <p class="text-gray-600">Track return on ad spend and optimize for conversions</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-1" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            <div>
+                                <h3 class="font-semibold text-gray-900 mb-1">Funnel Analysis</h3>
+                                <p class="text-gray-600">Identify drop-off points and optimize the customer journey</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-1" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            <div>
+                                <h3 class="font-semibold text-gray-900 mb-1">Marketing Spend Optimization</h3>
+                                <p class="text-gray-600">Allocate budget to highest-performing channels and tactics</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-green-50 p-6 rounded-lg border-l-4 border-green-600">
+                        <h4 class="font-bold text-gray-900 mb-2">Business Impact</h4>
+                        <p class="text-gray-600">Stop wasting money on ineffective campaigns. Invest smarter and
+                            generate more qualified leads at lower cost.</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <h3 class="text-xl font-bold text-gray-900 mb-6">Channel Performance Comparison</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-gray-700">Google Ads</span>
+                                <span class="font-bold text-primary-600">245% ROI</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="bg-primary-600 h-3 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-gray-700">Social Media</span>
+                                <span class="font-bold text-accent-600">185% ROI</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="bg-accent-600 h-3 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-gray-700">Email Marketing</span>
+                                <span class="font-bold text-green-600">320% ROI</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="bg-green-600 h-3 rounded-full" style="width: 100%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-gray-700">Content Marketing</span>
+                                <span class="font-bold text-purple-600">165% ROI</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="bg-purple-600 h-3 rounded-full" style="width: 65%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Data Solutions -->
+    <section id="custom-solutions" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-12">
+                    <div
+                        class="inline-block px-4 py-2 bg-purple-100 text-purple-600 rounded-full font-semibold text-sm mb-4">
+                        Service 04
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Custom Data Solutions</h2>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                        Every business is unique. We build tailored solutions that fit your specific needs and
+                        workflows.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <div class="w-14 h-14 bg-primary-100 rounded-lg flex items-center justify-center mb-6">
+                            <svg class="w-7 h-7 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Data Cleaning & Preparation</h3>
+                        <p class="text-gray-600 mb-4">
+                            Transform messy, incomplete data into clean, structured datasets ready for analysis.
+                        </p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-primary-600 rounded-full mr-3"></span>
+                                Remove duplicates and errors
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-primary-600 rounded-full mr-3"></span>
+                                Standardize formats
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-primary-600 rounded-full mr-3"></span>
+                                Fill missing values intelligently
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <div class="w-14 h-14 bg-accent-100 rounded-lg flex items-center justify-center mb-6">
+                            <svg class="w-7 h-7 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Dashboard Development</h3>
+                        <p class="text-gray-600 mb-4">
+                            Interactive, real-time dashboards that visualize your most important metrics at a glance.
+                        </p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-accent-600 rounded-full mr-3"></span>
+                                Power BI & Tableau dashboards
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-accent-600 rounded-full mr-3"></span>
+                                Custom web dashboards
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-accent-600 rounded-full mr-3"></span>
+                                Mobile-friendly design
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <div class="w-14 h-14 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                            <svg class="w-7 h-7 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Automated Reporting</h3>
+                        <p class="text-gray-600 mb-4">
+                            Set up automated reports that deliver insights to your inbox on your schedule.
+                        </p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-green-600 rounded-full mr-3"></span>
+                                Daily, weekly, or monthly reports
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-green-600 rounded-full mr-3"></span>
+                                Email & Slack integration
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-green-600 rounded-full mr-3"></span>
+                                PDF & Excel export
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <div class="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                            <svg class="w-7 h-7 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">One-Time & Recurring Analysis</h3>
+                        <p class="text-gray-600 mb-4">
+                            Get project-based insights or ongoing analytical support as your business evolves.
+                        </p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-purple-600 rounded-full mr-3"></span>
+                                Ad-hoc analysis requests
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-purple-600 rounded-full mr-3"></span>
+                                Subscription-based support
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-purple-600 rounded-full mr-3"></span>
+                                Flexible engagement models
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 md:py-24 bg-gradient-to-r from-primary-600 to-primary-700 text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Get Started?</h2>
+                <p class="text-xl mb-8 text-blue-100">
+                    Let's discuss which analytics solution is right for your business
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact.html"
+                        class="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition duration-300 shadow-lg">
+                        Request Free Consultation
+                    </a>
+                    <a href="case-studies.html"
+                        class="bg-primary-500 bg-opacity-30 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-opacity-40 transition duration-300 border-2 border-white border-opacity-30">
+                        View Success Stories
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- Company Info -->
+                <div class="md:col-span-1">
+                    <h3 class="text-white text-xl font-bold mb-4">K-Tech Solutions</h3>
+                    <p class="text-gray-400 text-sm mb-4">
+                        Turning Business Data Into Smart Decisions
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="services.html" class="hover:text-white transition duration-300">Services</a></li>
+                        <li><a href="how-it-works.html" class="hover:text-white transition duration-300">How It
+                                Works</a></li>
+                        <li><a href="case-studies.html" class="hover:text-white transition duration-300">Case
+                                Studies</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="services.html#business-analytics"
+                                class="hover:text-white transition duration-300">Business Analytics</a></li>
+                        <li><a href="services.html#customer-analytics"
+                                class="hover:text-white transition duration-300">Customer Analytics</a></li>
+                        <li><a href="services.html#marketing-analytics"
+                                class="hover:text-white transition duration-300">Marketing Analytics</a></li>
+                        <li><a href="services.html#custom-solutions"
+                                class="hover:text-white transition duration-300">Custom Solutions</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            <a href="mailto:karankr9237@gmail.com"
+                                class="hover:text-white transition duration-300">karankr9237@gmail.com</a>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                            <a href="tel:+919263427937" class="hover:text-white transition duration-300">+91 92634
+                                27937</a>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                            </svg>
+                            <span>ktechsolutions.in</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2026 K-Tech Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/charts.js"></script>
+</body>
+
+</html>

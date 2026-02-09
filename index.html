@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="K-Tech Solutions - Turning Business Data Into Smart Decisions. Professional data analytics services for small and medium businesses. Get actionable insights from your business data.">
+    <meta name="keywords"
+        content="data analytics, business analytics, customer analytics, marketing analytics, data insights, K-Tech Solutions, ktechsolutions">
+    <meta name="author" content="K-Tech Solutions">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="K-Tech Solutions - Data Analytics for Business Growth">
+    <meta property="og:description"
+        content="Turning Business Data Into Smart Decisions. Professional analytics services tailored for growing businesses.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ktechsolutions.in">
+
+    <title>K-Tech Solutions - Turning Business Data Into Smart Decisions</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#e6f7ff',
+                            100: '#bae7ff',
+                            200: '#91d5ff',
+                            300: '#69c0ff',
+                            400: '#40a9ff',
+                            500: '#1890ff',
+                            600: '#096dd9',
+                            700: '#0050b3',
+                            800: '#003a8c',
+                            900: '#002766',
+                        },
+                        accent: {
+                            500: '#13c2c2',
+                            600: '#08979c',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+
+<body class="font-sans antialiased bg-gray-50">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-bold text-primary-600">
+                        K-Tech Solutions
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html"
+                            class="text-gray-900 font-semibold border-b-2 border-primary-600 px-3 py-2 text-sm">Home</a>
+                        <a href="services.html"
+                            class="text-gray-600 hover:text-primary-600 px-3 py-2 text-sm transition duration-300">Services</a>
+                        <a href="how-it-works.html"
+                            class="text-gray-600 hover:text-primary-600 px-3 py-2 text-sm transition duration-300">How
+                            It Works</a>
+                        <a href="case-studies.html"
+                            class="text-gray-600 hover:text-primary-600 px-3 py-2 text-sm transition duration-300">Case
+                            Studies</a>
+                        <a href="about.html"
+                            class="text-gray-600 hover:text-primary-600 px-3 py-2 text-sm transition duration-300">About
+                            Us</a>
+                        <a href="contact.html"
+                            class="bg-primary-600 text-white px-5 py-2 rounded-lg hover:bg-primary-700 transition duration-300 text-sm font-semibold">Contact</a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary-600 focus:outline-none"
+                        aria-label="Toggle mobile menu">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-gray-900 font-semibold bg-primary-50">Home</a>
+                <a href="services.html" class="block px-3 py-2 text-gray-600 hover:bg-gray-50">Services</a>
+                <a href="how-it-works.html" class="block px-3 py-2 text-gray-600 hover:bg-gray-50">How It Works</a>
+                <a href="case-studies.html" class="block px-3 py-2 text-gray-600 hover:bg-gray-50">Case Studies</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-600 hover:bg-gray-50">About Us</a>
+                <a href="contact.html" class="block px-3 py-2 text-primary-600 font-semibold">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+        class="relative bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white py-20 md:py-32 overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div
+                class="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')]">
+            </div>
+        </div>
+
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-4xl mx-auto text-center fade-in">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                    Turning Business Data Into <span class="text-accent-500">Smart Decisions</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
+                    We help businesses convert raw data into actionable insights that drive growth and improve
+                    performance.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact.html"
+                        class="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition duration-300 shadow-lg hover:scale-105 transform">
+                        Get a Free Data Audit
+                    </a>
+                    <a href="services.html"
+                        class="bg-primary-500 bg-opacity-30 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-opacity-40 transition duration-300 border-2 border-white border-opacity-30">
+                        Explore Services
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Introduction -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                    Software-Driven Analytics for Business Growth
+                </h2>
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                    K-Tech Solutions is a software-based analytics company that helps businesses identify trends,
+                    uncover risks, and deliver clear, decision-ready intelligence. Our approach combines business
+                    understanding, statistical analysis, and modern software tools to ensure insights are practical—not
+                    just technical.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                    <div class="stat-card">
+                        <div class="text-4xl font-bold text-primary-600 mb-2">100+</div>
+                        <div class="text-gray-600">Projects Delivered</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="text-4xl font-bold text-primary-600 mb-2">50+</div>
+                        <div class="text-gray-600">Happy Clients</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="text-4xl font-bold text-primary-600 mb-2">24/7</div>
+                        <div class="text-gray-600">Support Available</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose K-Tech Solutions -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose K-Tech Solutions</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    We deliver analytics that business leaders can understand and act on
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="feature-card p-6">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0">
+                            <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">Business-First Approach</h3>
+                            <p class="text-gray-600">We focus on business outcomes, not just technical metrics</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-card p-6">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0">
+                            <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-accent-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">Clear Reporting</h3>
+                            <p class="text-gray-600">Non-technical reports that decision-makers can understand</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-card p-6">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0">
+                            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">Secure & Confidential</h3>
+                            <p class="text-gray-600">Strict data handling protocols and NDAs available</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-card p-6">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0">
+                            <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">Fast Turnaround</h3>
+                            <p class="text-gray-600">Quick delivery without compromising on quality</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-card p-6">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0">
+                            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">Scalable Solutions</h3>
+                            <p class="text-gray-600">Solutions that grow with your business needs</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-card p-6">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0">
+                            <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">Decision Support</h3>
+                            <p class="text-gray-600">We help you act on insights effectively</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sample Visualization Section -->
+    <section class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Data-Driven Insights</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Visualize your business performance with interactive dashboards
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Revenue Growth Trend</h3>
+                    <canvas id="revenueChart"></canvas>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Customer Segmentation</h3>
+                    <canvas id="customerChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools & Technologies -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Tools & Technologies</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    We use industry-leading tools to deliver accurate and actionable insights
+                </p>
+            </div>
+
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12 max-w-4xl mx-auto">
+                <div class="tech-badge">Excel / Google Sheets</div>
+                <div class="tech-badge">SQL</div>
+                <div class="tech-badge">Python</div>
+                <div class="tech-badge">Power BI</div>
+                <div class="tech-badge">Tableau</div>
+                <div class="tech-badge">Cloud Analytics</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 md:py-24 bg-gradient-to-r from-primary-600 to-primary-700 text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Data?</h2>
+                <p class="text-xl mb-8 text-blue-100">
+                    Get a free data audit and discover insights you're missing
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact.html"
+                        class="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition duration-300 shadow-lg">
+                        Request Free Data Review
+                    </a>
+                    <a href="case-studies.html"
+                        class="bg-primary-500 bg-opacity-30 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-opacity-40 transition duration-300 border-2 border-white border-opacity-30">
+                        View Case Studies
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- Company Info -->
+                <div class="md:col-span-1">
+                    <h3 class="text-white text-xl font-bold mb-4">K-Tech Solutions</h3>
+                    <p class="text-gray-400 text-sm mb-4">
+                        Turning Business Data Into Smart Decisions
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="services.html" class="hover:text-white transition duration-300">Services</a></li>
+                        <li><a href="how-it-works.html" class="hover:text-white transition duration-300">How It
+                                Works</a></li>
+                        <li><a href="case-studies.html" class="hover:text-white transition duration-300">Case
+                                Studies</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="services.html#business-analytics"
+                                class="hover:text-white transition duration-300">Business Analytics</a></li>
+                        <li><a href="services.html#customer-analytics"
+                                class="hover:text-white transition duration-300">Customer Analytics</a></li>
+                        <li><a href="services.html#marketing-analytics"
+                                class="hover:text-white transition duration-300">Marketing Analytics</a></li>
+                        <li><a href="services.html#custom-solutions"
+                                class="hover:text-white transition duration-300">Custom Solutions</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            <a href="mailto:karankr9237@gmail.com"
+                                class="hover:text-white transition duration-300">karankr9237@gmail.com</a>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                            <a href="tel:+919263427937" class="hover:text-white transition duration-300">+91 92634
+                                27937</a>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                            </svg>
+                            <span>ktechsolutions.in</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2026 K-Tech Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/charts.js"></script>
+</body>
+
+</html>

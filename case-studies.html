@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Real-world success stories from K-Tech Solutions clients. See how data analytics helped businesses increase revenue, reduce churn, and optimize operations.">
+    <meta name="keywords"
+        content="case studies, success stories, data analytics results, business impact, K-Tech Solutions">
+    <meta name="author" content="K-Tech Solutions">
+
+    <title>Case Studies - K-Tech Solutions</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#e6f7ff',
+                            100: '#bae7ff',
+                            200: '#91d5ff',
+                            300: '#69c0ff',
+                            400: '#40a9ff',
+                            500: '#1890ff',
+                            600: '#096dd9',
+                            700: '#0050b3',
+                            800: '#003a8c',
+                            900: '#002766',
+                        },
+                        accent: {
+                            500: '#13c2c2',
+                            600: '#08979c',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+
+<body class="font-sans antialiased bg-gray-50">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-bold text-primary-600">
+                        K-Tech Solutions
+                    </a>
+                </div>
+
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html"
+                            class="text-gray-600 hover:text-primary-600 px-3 py-2 text-sm transition duration-300">Home</a>
+                        <a href="services.html"
+                            class="text-gray-600 hover:text-primary-600 px-3 py-2 text-sm transition duration-300">Services</a>
+                        <a href="how-it-works.html"
+                            class="text-gray-600 hover:text-primary-600 px-3 py-2 text-sm transition duration-300">How
+                            It Works</a>
+                        <a href="case-studies.html"
+                            class="text-gray-900 font-semibold border-b-2 border-primary-600 px-3 py-2 text-sm">Case
+                            Studies</a>
+                        <a href="about.html"
+                            class="text-gray-600 hover:text-primary-600 px-3 py-2 text-sm transition duration-300">About
+                            Us</a>
+                        <a href="contact.html"
+                            class="bg-primary-600 text-white px-5 py-2 rounded-lg hover:bg-primary-700 transition duration-300 text-sm font-semibold">Contact</a>
+                    </div>
+                </div>
+
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary-600 focus:outline-none"
+                        aria-label="Toggle mobile menu">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-gray-600 hover:bg-gray-50">Home</a>
+                <a href="services.html" class="block px-3 py-2 text-gray-600 hover:bg-gray-50">Services</a>
+                <a href="how-it-works.html" class="block px-3 py-2 text-gray-600 hover:bg-gray-50">How It Works</a>
+                <a href="case-studies.html" class="block px-3 py-2 text-gray-900 font-semibold bg-primary-50">Case
+                    Studies</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-600 hover:bg-gray-50">About Us</a>
+                <a href="contact.html" class="block px-3 py-2 text-primary-600 font-semibold">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bg-gradient-to-r from-primary-600 to-primary-700 text-white py-16 md:py-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Case Studies</h1>
+                <p class="text-xl text-blue-100">
+                    Real-world success stories from businesses we've helped grow
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study 1: E-commerce -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-5xl mx-auto">
+                <div class="case-study-card bg-gradient-to-br from-blue-50 to-white p-8 md:p-12 rounded-2xl shadow-xl">
+                    <div
+                        class="inline-block px-4 py-2 bg-primary-600 text-white rounded-full font-semibold text-sm mb-6">
+                        E-commerce
+                    </div>
+
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Increasing Revenue by 42% Through Customer Segmentation
+                    </h2>
+
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
+                        <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                            <div class="impact-metric">+42%</div>
+                            <div class="text-gray-600 font-semibold mt-2">Revenue Growth</div>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                            <div class="impact-metric">-28%</div>
+                            <div class="text-gray-600 font-semibold mt-2">Churn Rate</div>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                            <div class="impact-metric">+65%</div>
+                            <div class="text-gray-600 font-semibold mt-2">Customer LTV</div>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                            <div class="impact-metric">3.2x</div>
+                            <div class="text-gray-600 font-semibold mt-2">ROI on Analytics</div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <span
+                                    class="w-10 h-10 bg-red-100 text-red-600 rounded-full flex items-center justify-center mr-3">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                                    </svg>
+                                </span>
+                                The Problem
+                            </h3>
+                            <p class="text-gray-700 leading-relaxed pl-13">
+                                A mid-sized online fashion retailer was experiencing declining repeat purchase rates and
+                                couldn't
+                                identify why customers weren't coming back. They were treating all customers the same
+                                way, leading
+                                to wasted marketing spend and missed opportunities.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <span
+                                    class="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mr-3">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                                    </svg>
+                                </span>
+                                The Data
+                            </h3>
+                            <p class="text-gray-700 leading-relaxed pl-13">
+                                We analyzed 18 months of transaction data covering 45,000+ customers, including purchase
+                                history,
+                                browsing behavior, product preferences, order values, and email engagement metrics.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <span
+                                    class="w-10 h-10 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center mr-3">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                                    </svg>
+                                </span>
+                                The Insight
+                            </h3>
+                            <p class="text-gray-700 leading-relaxed pl-13 mb-4">
+                                We identified 5 distinct customer segments with dramatically different behaviors:
+                            </p>
+                            <ul class="text-gray-700 space-y-2 pl-13">
+                                <li class="flex items-start">
+                                    <span class="text-primary-600 mr-2">•</span>
+                                    <span><strong>VIP Loyalists (12%)</strong>: High-value, frequent buyers who drove
+                                        41% of revenue</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-primary-600 mr-2">•</span>
+                                    <span><strong>Seasonal Shoppers (28%)</strong>: Bought only during sales and
+                                        promotions</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-primary-600 mr-2">•</span>
+                                    <span><strong>One-Time Buyers (35%)</strong>: Never returned after first
+                                        purchase</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-primary-600 mr-2">•</span>
+                                    <span><strong>At-Risk Former Buyers (15%)</strong>: Previously active but hadn't
+                                        bought in 90+ days</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-primary-600 mr-2">•</span>
+                                    <span><strong>Growth Potential (10%)</strong>: Showed signs of becoming high-value
+                                        customers</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <span
+                                    class="w-10 h-10 bg-green-100 text-green-600 rounded-full flex items-center justify-center mr-3">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                    </svg>
+                                </span>
+                                Business Impact
+                            </h3>
+                            <p class="text-gray-700 leading-relaxed pl-13 mb-4">
+                                Armed with these insights, the retailer implemented targeted strategies for each
+                                segment:
+                            </p>
+                            <ul class="text-gray-700 space-y-2 pl-13">
+                                <li class="flex items-start">
+                                    <span class="text-green-600 mr-2">✓</span>
+                                    <span>Created a VIP program for loyalists with exclusive early access and
+                                        perks</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-green-600 mr-2">✓</span>
+                                    <span>Sent personalized win-back offers to at-risk customers</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-green-600 mr-2">✓</span>
+                                    <span>Developed nurture campaigns for one-time buyers with product
+                                        recommendations</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-green-600 mr-2">✓</span>
+                                    <span>Optimized email frequency and messaging by segment</span>
+                                </li>
+                            </ul>
+                            <p class="text-gray-700 leading-relaxed pl-13 mt-4">
+                                Within 6 months, revenue increased by 42%, customer lifetime value grew by 65%, and
+                                churn dropped by 28%.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study 2: Healthcare -->
+    <section class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-5xl mx-auto">
+                <div class="case-study-card bg-gradient-to-br from-green-50 to-white p-8 md:p-12 rounded-2xl shadow-xl">
+                    <div class="inline-block px-4 py-2 bg-green-600 text-white rounded-full font-semibold text-sm mb-6">
+                        Healthcare Services
+                    </div>
+
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Reducing Patient No-Shows by 37% with Predictive Analytics
+                    </h2>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                        <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                            <div class="impact-metric">-37%</div>
+                            <div class="text-gray-600 font-semibold mt-2">No-Show Rate</div>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                            <div class="impact-metric">₹18L</div>
+                            <div class="text-gray-600 font-semibold mt-2">Annual Savings</div>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                            <div class="impact-metric">+24%</div>
+                            <div class="text-gray-600 font-semibold mt-2">Appointment Efficiency</div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">The Problem</h3>
+                            <p class="text-gray-700 leading-relaxed">
+                                A multi-specialty clinic with 8 doctors was losing ₹25+ lakhs annually due to patient
+                                no-shows.
+                                They had no way to predict which patients were likely to miss appointments, making it
+                                difficult
+                                to optimize scheduling and send effective reminders.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">The Data & Insight</h3>
+                            <p class="text-gray-700 leading-relaxed">
+                                We analyzed appointment history, patient demographics, time/day patterns, weather data,
+                                and
+                                appointment type. The analysis revealed that no-shows were strongly correlated with:
+                            </p>
+                            <ul class="text-gray-700 space-y-2 mt-3">
+                                <li>• First-time patients (2.3x more likely to no-show)</li>
+                                <li>• Appointments scheduled more than 14 days in advance</li>
+                                <li>• Afternoon slots on Fridays</li>
+                                <li>• Patients with previous no-show history</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">Business Impact</h3>
+                            <p class="text-gray-700 leading-relaxed">
+                                We built a predictive model that assigned a "no-show risk score" to every appointment.
+                                The clinic
+                                implemented targeted interventions—extra SMS reminders for high-risk appointments,
+                                overbooking
+                                strategies for likely no-shows, and priority scheduling for reliable patients. No-show
+                                rates dropped
+                                from 16% to 10%, saving ₹18 lakhs annually and improving patient satisfaction.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study 3: Retail -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-5xl mx-auto">
+                <div
+                    class="case-study-card bg-gradient-to-br from-purple-50 to-white p-8 md:p-12 rounded-2xl shadow-xl">
+                    <div
+                        class="inline-block px-4 py-2 bg-purple-600 text-white rounded-full font-semibold text-sm mb-6">
+                        Retail Chain
+                    </div>
+
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Optimizing Inventory to Reduce Stockouts by 54%
+                    </h2>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                        <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                            <div class="impact-metric">-54%</div>
+                            <div class="text-gray-600 font-semibold mt-2">Stockouts</div>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                            <div class="impact-metric">-32%</div>
+                            <div class="text-gray-600 font-semibold mt-2">Excess Inventory</div>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                            <div class="impact-metric">+28%</div>
+                            <div class="text-gray-600 font-semibold mt-2">Profit Margin</div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">The Problem</h3>
+                            <p class="text-gray-700 leading-relaxed">
+                                A 12-location grocery chain was constantly battling two problems: running out of popular
+                                items
+                                (losing sales) and overstocking slow-moving products (tying up cash and leading to
+                                waste).
+                                Their gut-feel ordering approach wasn't working.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">The Data & Insight</h3>
+                            <p class="text-gray-700 leading-relaxed">
+                                We analyzed 2 years of sales data across all locations, factoring in seasonality, local
+                                events,
+                                promotions, and weather patterns. We discovered massive demand variations across
+                                stores—what sold
+                                well in one location barely moved in another. The data revealed optimal reorder points
+                                and quantities
+                                for each product at each location.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">Business Impact</h3>
+                            <p class="text-gray-700 leading-relaxed">
+                                We created location-specific ordering dashboards with automated alerts. Within 3 months,
+                                stockouts
+                                dropped by 54%, excess inventory fell by 32%, and profit margins improved by 28% due to
+                                reduced
+                                waste and better availability of high-demand items.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study 4: SaaS -->
+    <section class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-5xl mx-auto">
+                <div
+                    class="case-study-card bg-gradient-to-br from-orange-50 to-white p-8 md:p-12 rounded-2xl shadow-xl">
+                    <div
+                        class="inline-block px-4 py-2 bg-orange-600 text-white rounded-full font-semibold text-sm mb-6">
+                        SaaS Startup
+                    </div>
+
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Doubling Marketing ROI Through Channel Optimization
+                    </h2>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                        <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                            <div class="impact-metric">2.1x</div>
+                            <div class="text-gray-600 font-semibold mt-2">Marketing ROI</div>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                            <div class="impact-metric">-45%</div>
+                            <div class="text-gray-600 font-semibold mt-2">CAC</div>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                            <div class="impact-metric">+89%</div>
+                            <div class="text-gray-600 font-semibold mt-2">Qualified Leads</div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">The Problem</h3>
+                            <p class="text-gray-700 leading-relaxed">
+                                A B2B SaaS company was spending ₹12 lakhs/month across Google Ads, LinkedIn, content
+                                marketing,
+                                and email campaigns with no clear picture of what was working. Customer acquisition
+                                costs (CAC)
+                                were rising while conversions stagnated.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">The Data & Insight</h3>
+                            <p class="text-gray-700 leading-relaxed">
+                                We implemented proper attribution tracking and analyzed the full customer journey across
+                                all
+                                touchpoints. The shocking finding: 68% of marketing budget was being spent on channels
+                                that
+                                contributed less than 22% of actual customers. LinkedIn ads had a 4x better ROI than
+                                Google Ads
+                                for their target audience, but received only 15% of the budget.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">Business Impact</h3>
+                            <p class="text-gray-700 leading-relaxed">
+                                We recommended reallocating budget to high-performing channels, pausing low-ROI
+                                campaigns, and
+                                creating content specifically for decision-makers. Within 4 months, marketing ROI more
+                                than
+                                doubled, CAC dropped by 45%, and qualified lead volume increased by 89%.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 md:py-24 bg-gradient-to-r from-primary-600 to-primary-700 text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Write Your Success Story?</h2>
+                <p class="text-xl mb-8 text-blue-100">
+                    Let's unlock the insights hidden in your data
+                </p>
+                <a href="contact.html"
+                    class="inline-block bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition duration-300 shadow-lg">
+                    Get Your Free Data Audit
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="md:col-span-1">
+                    <h3 class="text-white text-xl font-bold mb-4">K-Tech Solutions</h3>
+                    <p class="text-gray-400 text-sm mb-4">
+                        Turning Business Data Into Smart Decisions
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="services.html" class="hover:text-white transition duration-300">Services</a></li>
+                        <li><a href="how-it-works.html" class="hover:text-white transition duration-300">How It
+                                Works</a></li>
+                        <li><a href="case-studies.html" class="hover:text-white transition duration-300">Case
+                                Studies</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="services.html#business-analytics"
+                                class="hover:text-white transition duration-300">Business Analytics</a></li>
+                        <li><a href="services.html#customer-analytics"
+                                class="hover:text-white transition duration-300">Customer Analytics</a></li>
+                        <li><a href="services.html#marketing-analytics"
+                                class="hover:text-white transition duration-300">Marketing Analytics</a></li>
+                        <li><a href="services.html#custom-solutions"
+                                class="hover:text-white transition duration-300">Custom Solutions</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            <a href="mailto:karankr9237@gmail.com"
+                                class="hover:text-white transition duration-300">karankr9237@gmail.com</a>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                            <a href="tel:+919263427937" class="hover:text-white transition duration-300">+91 92634
+                                27937</a>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                            </svg>
+                            <span>ktechsolutions.in</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2026 K-Tech Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/charts.js"></script>
+</body>
+
+</html>

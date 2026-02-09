@@ -1,0 +1,25 @@
+{
+  "revenue": {
+    "months": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    "values": [45, 52, 48, 65, 72, 78, 85, 92, 88, 105, 115, 125],
+    "unit": "Lakhs INR"
+  },
+  "customerSegmentation": {
+    "segments": [
+      {"name": "New Customers", "percentage": 35},
+      {"name": "Returning", "percentage": 40},
+      {"name": "VIP/High Value", "percentage": 15},
+      {"name": "At Risk", "percentage": 10}
+    ]
+  },
+  "marketingROI": {
+    "quarters": ["Q1", "Q2", "Q3", "Q4"],
+    "roi": [145, 165, 185, 210],
+    "unit": "percentage"
+  },
+  "salesPerformance": {
+    "products": ["Product A", "Product B", "Product C", "Product D", "Product E"],
+    "before": [65, 45, 80, 55, 70],
+    "after": [95, 78, 110, 88, 105]
+  }
+}
