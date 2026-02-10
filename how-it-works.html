@@ -56,6 +56,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
 </head>
 
 <body class="font-sans antialiased bg-gray-50">
@@ -66,8 +67,8 @@
             <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
                 <div class="flex-shrink-0">
-                    <a href="index.html" class="text-2xl font-bold text-primary-600">
-                        K-Tech Solutions
+                    <a href="index.html" class="flex items-center no-underline">
+                        <img src="assets/images/Logo.png" alt="K-Tech Solutions" class="h-12 w-auto">
                     </a>
                 </div>
 
@@ -123,8 +124,8 @@
     <section class="bg-gradient-to-r from-primary-600 to-primary-700 text-white py-16 md:py-20">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl mx-auto text-center">
-                <h1 class="text-4xl md:text-5xl font-bold mb-6">How It Works</h1>
-                <p class="text-xl text-blue-100">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 reveal">How It Works</h1>
+                <p class="text-xl text-blue-100 reveal delay-200">
                     Our proven 5-step process transforms your data into decision-ready insights
                 </p>
             </div>
@@ -200,7 +201,7 @@
                                 Secure Data Handling
                             </h3>
                             <p class="text-green-800 text-sm">All data is transferred through secure channels. We follow
-                                strict confidentiality protocols and can sign NDAs upon request.</p>
+                                strict confidentiality protocols with secure data handling.</p>
                         </div>
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -380,17 +381,6 @@
                     </div>
 
                     <div class="bg-white p-8 rounded-xl shadow-lg text-center">
-                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">NDA Available</h3>
-                        <p class="text-gray-600">We sign non-disclosure agreements upon request</p>
-                    </div>
-
-                    <div class="bg-white p-8 rounded-xl shadow-lg text-center">
                         <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                             <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -552,6 +542,7 @@
 
     <!-- JavaScript -->
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/3d-effects.js"></script>
 </body>
 
 </html>

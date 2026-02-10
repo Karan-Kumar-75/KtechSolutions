@@ -61,6 +61,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
 
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
@@ -74,8 +75,8 @@
             <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
                 <div class="flex-shrink-0">
-                    <a href="index.html" class="text-2xl font-bold text-primary-600">
-                        K-Tech Solutions
+                    <a href="index.html" class="flex items-center no-underline">
+                        <img src="assets/images/Logo.png" alt="K-Tech Solutions" class="h-12 w-auto">
                     </a>
                 </div>
 
@@ -130,8 +131,8 @@
     <section class="bg-gradient-to-r from-primary-600 to-primary-700 text-white py-16 md:py-20">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl mx-auto text-center">
-                <h1 class="text-4xl md:text-5xl font-bold mb-6">Our Services</h1>
-                <p class="text-xl text-blue-100">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 reveal">Our Services</h1>
+                <p class="text-xl text-blue-100 reveal delay-200">
                     Comprehensive analytics solutions designed to solve your business challenges
                 </p>
             </div>
@@ -142,7 +143,7 @@
     <section id="business-analytics" class="py-16 md:py-24 bg-white">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
+                <div class="reveal-left">
                     <div
                         class="inline-block px-4 py-2 bg-primary-100 text-primary-600 rounded-full font-semibold text-sm mb-4">
                         Service 01
@@ -669,7 +670,8 @@
 
     <!-- JavaScript -->
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/charts.js"></script>
+    <script src="assets/js/roi-calculator.js"></script>
+    <script src="assets/js/3d-effects.js"></script>
 </body>
 
 </html>

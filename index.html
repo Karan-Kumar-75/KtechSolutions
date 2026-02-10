@@ -63,6 +63,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
 
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
@@ -76,8 +77,8 @@
             <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
                 <div class="flex-shrink-0">
-                    <a href="index.html" class="text-2xl font-bold text-primary-600">
-                        K-Tech Solutions
+                    <a href="index.html" class="flex items-center no-underline">
+                        <img src="assets/images/Logo.png" alt="K-Tech Solutions" class="h-12 w-auto">
                     </a>
                 </div>
 
@@ -138,26 +139,26 @@
         </div>
 
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="max-w-4xl mx-auto text-center fade-in">
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight reveal float">
                     Turning Business Data Into <span class="text-accent-500">Smart Decisions</span>
                 </h1>
 
                 <!-- Animated Quote -->
-                <div class="min-h-[80px] mb-8">
+                <div class="min-h-[80px] mb-8 reveal delay-200">
                     <p id="animated-quote"
                         class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto italic font-light transition-opacity duration-1000">
                         "Data turns intuition into evidence and decisions into strategy."
                     </p>
                 </div>
 
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <div class="flex flex-col sm:flex-row gap-4 justify-center stagger-children">
                     <a href="contact.html"
-                        class="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition duration-300 shadow-lg hover:scale-105 transform">
+                        class="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition duration-300 shadow-lg hover:scale-105 transform hover-glow btn-press">
                         Get a Free Data Audit
                     </a>
                     <a href="services.html"
-                        class="bg-primary-500 bg-opacity-30 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-opacity-40 transition duration-300 border-2 border-white border-opacity-30">
+                        class="bg-primary-500 bg-opacity-30 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-opacity-40 transition duration-300 border-2 border-white border-opacity-30 hover-shine btn-press">
                         Explore Services
                     </a>
                 </div>
@@ -169,25 +170,25 @@
     <section class="py-16 md:py-24 bg-white">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 reveal">
                     Software-Driven Analytics for Business Growth
                 </h2>
-                <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed reveal delay-200">
                     K-Tech Solutions is a software-based analytics company that helps businesses identify trends,
                     uncover risks, and deliver clear, decision-ready intelligence. Our approach combines business
                     understanding, statistical analysis, and modern software tools to ensure insights are practical—not
                     just technical.
                 </p>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-                    <div class="stat-card">
-                        <div class="text-4xl font-bold text-primary-600 mb-2">100+</div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 stagger-children">
+                    <div class="stat-card card-3d-lift">
+                        <div class="text-4xl font-bold text-primary-600 mb-2 counter" data-target="100">0</div>
                         <div class="text-gray-600">Projects Delivered</div>
                     </div>
-                    <div class="stat-card">
-                        <div class="text-4xl font-bold text-primary-600 mb-2">50+</div>
+                    <div class="stat-card card-3d-lift">
+                        <div class="text-4xl font-bold text-primary-600 mb-2 counter" data-target="50">0</div>
                         <div class="text-gray-600">Happy Clients</div>
                     </div>
-                    <div class="stat-card">
+                    <div class="stat-card card-3d-lift">
                         <div class="text-4xl font-bold text-primary-600 mb-2">24/7</div>
                         <div class="text-gray-600">Support Available</div>
                     </div>
@@ -200,17 +201,18 @@
     <section class="py-16 md:py-24 bg-white">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose K-Tech Solutions</h2>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 reveal">Why Choose K-Tech Solutions</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto reveal delay-200">
                     We deliver analytics that business leaders can understand and act on
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="feature-card p-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-children">
+                <div class="feature-card p-6 card-tilt transition-smooth">
                     <div class="flex items-start">
                         <div class="flex-shrink-0">
-                            <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
+                            <div
+                                class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center icon-bounce">
                                 <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor"
                                     viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -225,10 +227,11 @@
                     </div>
                 </div>
 
-                <div class="feature-card p-6">
+                <div class="feature-card p-6 card-tilt transition-smooth">
                     <div class="flex items-start">
                         <div class="flex-shrink-0">
-                            <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center">
+                            <div
+                                class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center icon-bounce">
                                 <svg class="w-6 h-6 text-accent-600" fill="none" stroke="currentColor"
                                     viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -243,10 +246,10 @@
                     </div>
                 </div>
 
-                <div class="feature-card p-6">
+                <div class="feature-card p-6 card-tilt transition-smooth">
                     <div class="flex items-start">
                         <div class="flex-shrink-0">
-                            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center icon-bounce">
                                 <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor"
                                     viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -256,7 +259,7 @@
                         </div>
                         <div class="ml-4">
                             <h3 class="text-lg font-bold text-gray-900 mb-2">Secure & Confidential</h3>
-                            <p class="text-gray-600">Strict data handling protocols and NDAs available</p>
+                            <p class="text-gray-600">Strict data handling protocols and security measures</p>
                         </div>
                     </div>
                 </div>
@@ -467,6 +470,7 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/charts.js"></script>
     <script src="assets/js/quote-rotator.js"></script>
+    <script src="assets/js/3d-effects.js"></script>
 </body>
 
 </html>
